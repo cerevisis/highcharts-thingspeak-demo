@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Highcharts ThingSpeak Demo</title>
+
+		<meta name="description" content="Highcharts ThingSpeak Demo" />
+		<meta name="keywords" content="Highcharts ThingSpeak Demo" />
+		<meta name="author" content="Edward Duckitt https://github.com/cerevisis/highcharts-thingspeak-demo/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<script src="https://code.highcharts.com/stock/highstock.js"></script>
+		<script src="https://code.highcharts.com/modules/data.js"></script>
+		<script src="https://code.highcharts.com/modules/series-label.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	</head>
+	<style>
+		body
+		{
+			background-color:#efefef;
+			font-family:Arial,Helvetica;
+		}
+
+		.container{
+			margin:auto;
+			max-width:1440px;
+			padding:24px;
+		}
+
+		.chartcontainer
+		{
+			padding:12px;
+			margin:auto 12px;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<h5>Author: Edward Duckitt <a href="https://github.com/cerevisis/highcharts-thingspeak-demo/"  target="blank">GitHub</a></h5>
+			<h3>ThingSpeak Highcharts Stock Chart demo</h3>
+			
+			<p>This demo shows the ability to download public and private ThingSpeak channel JSON data into multiple Highcharts Stock charts. It uses all 8 ThingSpeak channel fields, and as this data is from a weather station, the channels are assigned in logical groups according to the station data.</p>
+			
+			<p><strong>NB</strong> ThingSpeak limits JSON data to a maximum of 8000 points and this is not affected by averaging value set.</p>
+			
+			<p>Private channel data can be read by choosing between the Highcharts.getJSON request (comment either one) in the chart.js file, and inserting your ThingSpeak channel Read API key in the apiKey variable.</p>
+			
+			<p>You can access my public ThingSpeak channel <a href="https://thingspeak.com/channels/1657561" target="blank">here</a>.</p>
+			
+			<p>Access ThingSpeak API documentation <a href="https://www.mathworks.com/help/thingspeak/readdata.html" target="blank">here</a>.</p>
+			 
+			<p>Highcharts Stock documentation can be accessed <a href="https://www.highcharts.com/products/stock/" target="blank">here</a>.</p>
+
+			<figure class="highcharts-figure">
+				<div class="chartcontainer" id="chart-container1"></div>
+			</figure>
+			<figure class="highcharts-figure">
+				<div class="chartcontainer" id="chart-container2"></div>
+			</figure>
+
+			<figure class="highcharts-figure">
+				<div class="chartcontainer" id="chart-container3"></div>
+			</figure>
+		</div>
+		<script type="text/javascript" src="chart.js"></script>
+	</body>
+</html>
