@@ -1,4 +1,4 @@
-# highcharts-thingspeak-demo
+# Highcharts Thingspeak multi-field demo
 ThingSpeak Highcharts Stock Chart demo
 
 NB All licensing from Highcharts and Thingspeak applies.
